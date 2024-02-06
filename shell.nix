@@ -1,0 +1,6 @@
+{ nixpkgs ? import <nixpkgs> {} }:
+
+with nixpkgs.pkgs;
+
+let drv = haskellPackages.callPackage ./default.nix {};
+in if pkgs.lib.inNixShell then drv.env else drv

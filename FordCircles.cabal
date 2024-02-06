@@ -1,0 +1,10 @@
+cabal-version:      3.4
+name:               FordCircles
+version:            0.1.0.0
+synopsis:           Draw Ford Circles using the diagrams package
+
+executable FordCircles
+  main-is:          FordCircles.hs
+  build-depends:    base, colour, diagrams-lib, diagrams-svg, SVGFonts
+  default-language: Haskell2010
+  ghc-options:     -Wall -Wcompat -Wunused-packages
