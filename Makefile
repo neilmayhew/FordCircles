@@ -8,8 +8,8 @@ fonts/$(FONTNAME).ttf:
 	@echo 'and place it in the fonts subdirectory'
 	@false
 
-default.nix: FordCircles.cabal
-	cabal2nix . >$@
+nix/default.nix: FordCircles.cabal
+	(cd $(@D) && cabal2nix ..) >$@
 
 fonts/%.svg: fonts/%.ttf
 	fonts/ttf2svg.sh $<
